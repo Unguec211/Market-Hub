@@ -94,9 +94,43 @@ button{
 .hero-content{
     text-align: center;
     color: white;
-}
-h2{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    h2{
     color: yellow;
+}
+span{
+    color: #2563eb;
+    font-size: 1.5rem;
+}
+}
+
+
+.heroBtn{
+    display: flex;
+    gap: 1rem;
+    .primaryBtn{
+        background-color: #2563eb;
+        padding: 1rem;
+        color: white;
+        border-radius: 0.6rem;
+    }
+    .primaryBtn:hover{
+        background-color: transparent;
+        border: 1px solid yellow;
+    }
+    .secondaryBtn:hover{
+        background-color: #595e68;
+    }
+    .secondaryBtn{
+        background-color: transparent;
+        padding: 1rem;
+        color: white;
+        border-radius: 0.6rem;
+        border: 1px solid yellow;
+    }
 }
 
 @media(max-width: 900px){
