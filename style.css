@@ -73,6 +73,31 @@ button{
     border: none;
     background: transparent;
 }
+.hero{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+    background: 
+        linear-gradient(
+            rgb(12, 34, 56, 0.6), rgb(43, 57, 13, 0.6)
+        ),
+        url(https://images.unsplash.com/photo-1680713660046-67b7350ed679?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D)
+    
+    ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 40vh;
+}
+.hero-content{
+    text-align: center;
+    color: white;
+}
+h2{
+    color: yellow;
+}
 
 @media(max-width: 900px){
     .nav{
