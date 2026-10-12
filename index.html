@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    <!-- HEADER SECTION -->
     <header class="header">
         <div class="logo">
             <a href="#">Market-<span>Hub</span></a>
@@ -35,6 +36,7 @@
     </header>
 
     <main>
+        <!-- HERO SECTION -->
         <section class="hero" id="home">
             <div class="hero-content">
                 <h2>Welcome to Market-Hub</h2>
@@ -44,9 +46,29 @@
             <div class="heroBtn">
                 <a href="#product" class="primaryBtn">Browse Products</a>
                 <a href="#sell" class="secondaryBtn">Sell Your Products</a>
+            </div>
+        </section>
+        <section class="search-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="search for products">
+                <button id="searchButton">Search</button>
+            </div>
+        </section>
+
+        <section class="categories" id="categories">
+            <div class="section-heading">
+                <p>Shop by category</p>
+                <h2>Explore Categories</h2>
+            </div>
+            <div class="category-buttons">
+                <button class="category-btn active" data-category="all">
+                    All
+                </button>
+                <button class="category-btn">
+                    Fashion
+                </button>
 
             </div>
-
         </section>
 
     </main>
