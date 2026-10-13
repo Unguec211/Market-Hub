@@ -25,9 +25,10 @@ button{
     justify-content: space-between;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 50;
     border-bottom: 1px solid #e5e7eb;
     padding: 1rem;
+    background-color: #e5e7eb;
 }
 .logo{
     font-weight: bold;
