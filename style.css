@@ -233,7 +233,7 @@ span{
         right: 15px;
         width: 40px;
         border: none;
-        background: white;
+        background: none;
         font-size: 22px;
     }
     .favourite-button.liked{
