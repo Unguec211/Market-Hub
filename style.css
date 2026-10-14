@@ -198,7 +198,7 @@ span{
     }
 }
 
-/* STYLING PRODUCTS */
+/* styling products section*/
 .product-section{
     padding: 2rem;
 }
@@ -241,15 +241,14 @@ span{
     }
 }
 
-/*STYLING PRODUCTS INFORMATION */
+/*products style information*/
 .product-card:hover{
     transform: translateY(-5px);
 }
 
-.product-info{
+.products-info{
     padding: 1rem;
 
-    
 }
 
 h3{
@@ -259,6 +258,35 @@ h3{
 .product-description{
     color: #676768;
     margin-bottom: 8px;
+}
+
+.product-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+
+}
+
+/* price style */
+strong{
+    font-weight: bold;
+    color: brown;
+
+}
+
+.add-to-cart{
+    border: none;
+    background-color: #2563eb;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    
+}
+
+.add-to-cart:hover{
+    background-color: #0a3288;
 }
 
 .product-category{
