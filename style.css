@@ -289,6 +289,15 @@ strong{
     background-color: #0a3288;
 }
 
+/* cart */
+.cart-overlay{
+    position: fixed;
+    inset: 0;
+    background: rgb(0, 0, 0, 0.55);
+    z-index: 50;
+    right: 0;
+}
+
 .product-category{
     color: #2563eb;
     font-weight: bold;
