@@ -77,8 +77,9 @@ button{
 .hero{
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    padding: 2rem;
+    padding: clamp(2rem, 6vw, 4rem) 1.25rem;
     gap: 1rem;
     background: 
         linear-gradient(
@@ -90,12 +91,12 @@ button{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 40vh;
+    min-height: 360px;
 }
 .hero-content{
     text-align: center;
     color: white;
-    margin-top: 2rem;
+    max-width: 760px;
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
@@ -134,12 +135,18 @@ span{
     }
 }
 .search-section{
-    padding: 1rem;
+    padding: 1rem clamp(1rem, 5vw, 2rem);
     background-color: whitesmoke;
 
     .search-box{
         display: flex;
+        max-width: 640px;
+        margin: 0 auto;
         gap: 0.5rem;
+        input{
+            min-width: 0;
+            flex: 1;
+        }
 
         input{
             padding: 0.5rem;
@@ -170,7 +177,7 @@ span{
         color: #2563eb;
     }
     h2{
-        font-size: 36px;
+    font-size: clamp(1.75rem, 5vw, 2.25rem);
     }
 }
 
@@ -205,7 +212,7 @@ span{
 
 .products-grid{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;
 }
 
@@ -264,6 +271,7 @@ h3{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 0.75rem;
     padding: 1rem;
 
 }
@@ -353,10 +361,75 @@ strong{
     margin-bottom: 8px;
 }
 
+.site-footer{
+    padding: 2.5rem clamp(1rem, 5vw, 2.5rem) 1rem;
+    color: #e5e7eb;
+    background: #111827;
+}
+
+.footer-content{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-brand,
+.footer-links,
+.footer-sellers{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.footer-logo{
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: white;
+    span{
+        color: #60a5fa;
+    }
+}
+
+.footer-content h2{
+    color: white;
+    font-size: 1rem;
+}
+
+.footer-content p{
+    max-width: 38ch;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.footer-content a:not(.footer-logo){
+    color: #cbd5e1;
+}
+
+.footer-content a:hover{
+    color: white;
+}
+
+.footer-bottom{
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    padding-top: 1rem;
+    border-top: 1px solid #374151;
+    color: #cbd5e1;
+    font-size: 0.875rem;
+}
+
 @media(max-width: 900px){
+    .products-grid{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+    }
+
     .nav{
         position: absolute;
-        top: 70px;
+        top: 100%;
         left: 0;
         width: 100%;
         background-color:#f7f8fa;
@@ -371,5 +444,94 @@ strong{
     }
     .menu-button{
         display: block;
+    }
+
+    .footer-content{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-brand{
+        grid-column: 1 / -1;
+    }
+}
+
+@media(max-width: 560px){
+    .header{
+        padding: 0.75rem 1rem;
+    }
+
+    .hero{
+        min-height: 340px;
+        padding: 2.5rem 1rem;
+    }
+
+    .hero-content h2{
+        font-size: 1.4rem;
+    }
+
+    .hero-content h3{
+        font-size: 1.2rem;
+    }
+
+    .hero-content span{
+        font-size: 1.2rem;
+    }
+
+    .heroBtn{
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+        text-align: center;
+    }
+
+    .search-box button{
+        flex-shrink: 0;
+    }
+
+    .category-buttons{
+        gap: 0.6rem;
+    }
+
+    .category-buttons .category-btn{
+        padding: 0.7rem 0.85rem;
+    }
+
+    .product-section{
+        padding: 1.5rem 1rem;
+    }
+
+    .products-grid{
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
+    }
+
+    .product-card .product-Image{
+        height: clamp(200px, 65vw, 300px);
+    }
+
+    .product-bottom{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .footer-content{
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.75rem;
+    }
+
+    .footer-brand{
+        grid-column: auto;
+    }
+}
+
+@media(max-width: 360px){
+    .cart-button{
+        padding: 0.45rem;
+    }
+
+    .cart-total{
+        align-items: flex-start;
+        flex-direction: column;
     }
 }
